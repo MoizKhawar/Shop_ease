@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ShopEase</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout-section">
+            <h2>Checkout</h2>
+            <div id="checkout-cart-container">
+                <!-- Cart items will be rendered here by JavaScript -->
+            </div>
+            <div class="checkout-total">Total: $<span id="checkout-total">0.00</span></div>
+            <form id="checkout-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="delivery-address">Delivery Address</label>
+                    <textarea id="delivery-address" name="address" required rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="tel" id="contact-number" name="contact" required pattern="[0-9\-\+\s]{7,15}">
+                </div>
+                <button type="submit" class="checkout-btn">Place Order</button>
+            </form>
+            <div id="order-confirmation" class="order-confirmation" style="display:none;"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
